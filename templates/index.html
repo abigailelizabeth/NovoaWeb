@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
-{% block title %}Project {% endblock %}
-
+{% block title %}Quadratic Assignment {% endblock %}
+{% block cssFile %}index.css{% endblock %}
 {% block content %}
 <div id="main">
         <div class="header">
-            <h1>Flow, Distance Calculator</h1>
+            <h1>Quadratic Assignment Problem</h1>
             <h2>Abigail Barron</h2>
         </div>
 
         <div class="content">
-            <h2 class="content-subhead">Research Thesis</h2>
-            <p> This is where I'll put a description over what exactly Novoa's research is about. I'll provide links as well to anything that might help with the explanation.
+            <h2 class="content-subhead">Objective</h2>
+            <p>
+              to assign n facilities to n locations in sucha  way to lower the assignment cost
             </p>
 
             <h2 class="content-subhead">Diagrams describing how it works</h2>
@@ -33,10 +34,14 @@
                 </div>
             </div>
 
-            <h2 class="content-subhead">Try Resizing your Browser</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <h2 class="content-subhead">Examples</h2>
+          <p>See the quadratic assignment in the following examples: </p>
+            <ul>
+               <li> <a href="/examples/student-center/">Student Center</a></li>
+                <li><a href="/examples/biology-building/">Biology Building</a></li>
+               <li> <a href="/examples/gym/">Gym</a></li>
+               <li> <a href="/examples/engineering-building/">Engineering Building</a></li>
+            </ul>
         </div>
     </div>
 {% endblock %}

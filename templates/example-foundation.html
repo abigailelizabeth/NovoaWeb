@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block cssFile %}exStyle.css{% endblock %}
+{% block title %}{{ facility.title }}{% endblock %}
+{% block content %}
+  <script type="text/javascript" src="/static/js/example-ui.js"></script>
+
+
+<div class="container">
+<div class="pure-g">
+  <div class="pure-u-4-5">
+    <h1 class="pure-u-4-5">Quadratic Assignment - {{ facility.title }}</h1>
+    <p class="description">{{ facility.description }}</p>
+  </div>
+  <div class="pure-u-1-5">
+    <p>Examples</p>
+    <ul>
+      <li> <a href="/examples/student-center/">Student Center</a></li>
+      <li><a href="/examples/biology-building/">Biology Building</a></li>
+      <li> <a href="/examples/gym/">Gym</a></li>
+      <li> <a href="/examples/engineering-building/">Engineering Building</a></li>
+    </ul>
+  </div>
+
+  <div class="pure-u-2-5">
+    <p>Assign each department to a location</p>
+    <ul>
+      <li>Compute: calculate the solution value</li>
+      <li>Optimal: optimal solution</li>
+    </ul>
+    <div id="cal-container">
+    {% for x in range(1,5) %}
+      <div class="form-group selections">
+        <label for={{ "sel" + x|string }}>{{ "L"+x|string }}</label>
+        <select class="form-control" id="{{ "sel" + x|string }}">
+          <option selected ="selected" disabled value="None">Select Department</option>
+          {% for department in facility.departments %}
+          <option id={{ "opt" + department.id|string }} value={{ department.id }}>{{ department.title }} (Dep-{{ department.id+1 }})</option>
+          {% endfor %}
+        </select>
+      </div>
+    {% endfor %}
+      <button class="pure-button" id="compute">Compute</button>
+      <button class="pure-button" id="reset">Reset</button>
+      <button class="pure-button">Optimal</button>
+    <p>Calculate Cost: <label id="cost">0</label></p>
+    </div>
+  </div>
+  <div class="pure-u-3-5 visual"></div>
+
+
+</div>
+<div class="pure-g">
+<h2 class="pure-u-4-5 data-header">Data Used in Calculations</h2>
+
+  <div class="pure-u-2-5 data-container">
+  <p><h3>Flows</h3> between departments</p>
+    <table>
+      <tr class="label"><td> </td><td>Dep-1</td><td>Dep-2</td><td>Dep-3</td><td>Dep-4</td></tr>
+      {% for x in range(4) %}
+      <tr>
+        <td class="label">Dep-{{ x+1 }}</td>
+      {% for y in range(4) %}
+      <td class="cell">{{ flows[x][y] }}</td>
+      {% endfor %}
+      {% endfor %}
+      </tr>
+
+    </table>
+  </div>
+  <div class="pure-u-2-5 data-container">
+  <p><h3>Distances</h3> between locations</p>
+    <table>
+      <tr class="label"><td> </td><td>L1</td><td>L2</td><td>L3</td><td>L4</td></tr>
+      {% for x in range(4) %}
+      <tr>
+        <td class="label">L{{ x+1 }}</td>
+        {% for y in range(4) %}
+        <td class="cell">{{ distances[x][y] }}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+    </table>
+  </div>
+</div>
+
+</div>
+
+{% endblock %}

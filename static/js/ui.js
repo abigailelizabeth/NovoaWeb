@@ -2,7 +2,9 @@
  * Created by abiga on 3/27/2016.
  */
 (function (window, document) {
-
+    function doThis(){
+        alert('do this');
+    }
     var layout   = document.getElementById('layout'),
         menu     = document.getElementById('menu'),
         menuLink = document.getElementById('menuLink');

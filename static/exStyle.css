@@ -1,0 +1,45 @@
+.container{
+    margin-left: 12px;
+}
+.visual{
+    height: 320px;
+    background: url("sample.png");
+    background-repeat: no-repeat;
+}
+.ex-container{
+    margin-top: 25px;
+
+}
+.selections{
+    margin-bottom: 12px;
+}
+.description{
+    color: red;
+    font-family: "Comic Sans MS";
+}
+
+#cost{
+    border-bottom: 1px solid black;
+    color: red;
+}
+input{
+    width: 75px;
+}
+.data-header{
+    text-align: center;
+}
+.data-container{
+    margin-left: auto; margin-right: auto;
+}
+.cell{
+    text-align: center;
+    height: 48px;
+    width: 48px;
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+
+}
+
+.label{
+    border: none;
+}
