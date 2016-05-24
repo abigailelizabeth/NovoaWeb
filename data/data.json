@@ -1,6 +1,7 @@
 {
   "distances": [[0,80,150,170],[80,0,130,100],[150,130,0,120],[170,100,120,0]],
-  "flows": [[0,5,2,7],[5,0,3,8],[2,3,0,3],[7,8,3,0]],
+  "flows": [[0,3,0,2],[3,0,0,1],[0,0,0,4],[2,1,4,0]],
+  "objective": "In the Quadratic Assignment Problem (QAP), n units (usually departments, machines, or electronic components) must be assigned to n locations given the distance between the locations and the flow between the units. The goal is to find the assignment that minimizes the sum of the products of distance traveled and flow between the units.",
   "student-center":
   {
    "description": "In this example of the Student Center, you will see that..  ",
@@ -11,8 +12,8 @@
   "gym":
   {
     "description": "In this example of the Gym, each department represents certain rooms in a gym. What is the flow?",
-    "departments": [{"title": "Cardio Room", "id":0},{"title": "Weights Section", "id":1},{"title": "Showers", "id":2},{"title": "Pool", "id":3}],
-    "title": "Gym"
+    "departments": [{"title": "Courts", "id":0},{"title": "Weight Lifting", "id":1},{"title": "Entrance", "id":2},{"title": "Pool", "id":3}],
+    "title": "Recreation Center"
   },
 
   "engineering-building":
@@ -22,7 +23,7 @@
     "title": "Engineering Building"
   },
 
-  "biology-building":
+  "Hospital":
   {
     "description": "Now what happens if I justs end up writing a lot of stuff, how far down does it go, does it wrap around nicely, or what on earth will happen to this, I dont even know what building this is for. In this example of the Biology Building, each department represents certain rooms in a biology, something other stuff. What is the flow?",
     "departments": [{"title": "Lab", "id":0},{"title": "Office", "id":1},{"title": "Lounge", "id":2},{"title": "Restrooms", "id":3}],

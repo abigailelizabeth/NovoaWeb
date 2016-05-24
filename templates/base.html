@@ -25,14 +25,17 @@
               <a class="pure-menu-heading" href="/">Novoa</a>
 
               <ul class="pure-menu-list">
-                  <li class="pure-menu-item"><a href="/calculate" class="pure-menu-link">Calculate</a></li>
-                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">About</a></li>
-
-                  <li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
-                      <a href="#" class="pure-menu-link">Services</a>
+                  <li id="exampleNav" class="pure-menu-item"><a href="#" class="pure-menu-link">Examples</a><p id="arrow"><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                              <i class="fa fa-chevron-down" aria-hidden="true"></i><i class="fa fa-chevron-down" aria-hidden="true"></i></p></li>
+                  <li class="pure-menu-item">
+                    <ul id="exExtended" class="pure-menu-list">
+                      <li class="pure-menu-item"> <a class="pure-menu-link" href="/examples/student-center/">Student Center</a></li>
+                      <li class="pure-menu-item"><a class="pure-menu-link" href="/examples/biology-building/">Hospital</a></li>
+                      <li class="pure-menu-item"> <a class="pure-menu-link" href="/examples/gym/">Recreation Center</a></li>
+                      <li class="pure-menu-item"> <a class="pure-menu-link" href="/examples/engineering-building/">Engneer. Building</a></li>
+                    </ul>
                   </li>
 
-                  <li class="pure-menu-item"><a href="#" class="pure-menu-link">Contact</a></li>
               </ul>
           </div>
       </div>
@@ -41,9 +44,10 @@
 
     {% endblock %}
   </div>
-
-
+<script>var url="{{ request.path }}"</script>
 <script src="/static/js/ui.js"></script>
+<script type="text/javascript" src="/static/js/example-ui.js"></script>
+
 
 
 </body>

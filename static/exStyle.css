@@ -1,6 +1,6 @@
-.container{
-    margin-left: 12px;
-}
+/*.container{*/
+    /*margin-left: 12px;*/
+/*}*/
 .visual{
     height: 320px;
     background: url("sample.png");
@@ -14,8 +14,7 @@
     margin-bottom: 12px;
 }
 .description{
-    color: red;
-    font-family: "Comic Sans MS";
+    font-size: 12pt;
 }
 
 #cost{
@@ -42,4 +41,9 @@ input{
 
 .label{
     border: none;
+}
+
+.error{
+    color: red;
+    font-weight: 500;
 }

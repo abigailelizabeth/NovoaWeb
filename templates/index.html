@@ -3,45 +3,45 @@
 {% block cssFile %}index.css{% endblock %}
 {% block content %}
 <div id="main">
-        <div class="header">
-            <h1>Quadratic Assignment Problem</h1>
-            <h2>Abigail Barron</h2>
+    <div class="header">
+      <h1>Quadratic Assignment Problem</h1>
+      <h2>Abigail Barron</h2>
+    </div>
+
+    <div class="content">
+      <div id="objective">
+          <h2 class="content-subhead">Objective</h2>
+          <p>{{ objective }}</p>
+          <h2 class="content-subhead">Diagrams describing how it works</h2>
+            <p >In the QAP n units(facilities, departments, machines, or electronic components) must be assigned to n locations give the matrixes of flow..</p>
+
+          <div class="pure-g">
+              <div class="pure-u-1-2">
+                  <img class="pure-img-responsive" src="/static/facilities.png" alt="n-facilities">
+              </div>
+              <div class="pure-u-1-2">
+                  <img class="pure-img-responsive" src="/static/locations.png" alt="n locations">
+              </div>
+              <div class="pure-u-2-3">
+                  <img class="pure-img-responsive" src="/static/result.png" alt="T-Shirt Store">
+              </div>
+          </div>
+
+          <h2 class="content-subhead">Mathematical Formulation</h2>
+
         </div>
 
-        <div class="content">
-            <h2 class="content-subhead">Objective</h2>
-            <p>
-              to assign n facilities to n locations in sucha  way to lower the assignment cost
-            </p>
-
-            <h2 class="content-subhead">Diagrams describing how it works</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-
-            <div class="pure-g">
-                <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake">
-                </div>
-                <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train">
-                </div>
-                <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store">
-                </div>
-                <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain">
-                </div>
-            </div>
-
-            <h2 class="content-subhead">Examples</h2>
+        <div id="exampleSection">
+          <h2 class="content-subhead">Examples</h2>
           <p>See the quadratic assignment in the following examples: </p>
-            <ul>
-               <li> <a href="/examples/student-center/">Student Center</a></li>
-                <li><a href="/examples/biology-building/">Biology Building</a></li>
-               <li> <a href="/examples/gym/">Gym</a></li>
-               <li> <a href="/examples/engineering-building/">Engineering Building</a></li>
-            </ul>
+          <ul>
+             <li> <a href="/examples/student-center/">Student Center</a></li>
+              <li><a href="/examples/biology-building/">Biology Building</a></li>
+             <li> <a href="/examples/gym/">Gym</a></li>
+             <li> <a href="/examples/engineering-building/">Engineering Building</a></li>
+          </ul>
+          <button id="showObjective" class="pure-button pure-button-primary">Go Back</button>
         </div>
+      </div>
     </div>
 {% endblock %}
